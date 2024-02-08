@@ -33,14 +33,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetGame(_ sender: Any) {
-        print("Reset button pressed")
-
             logic.resetGame()
             updateUI()
     }
     
     @objc func updateUI() {
-        print("Func called")
 
         if logic.isCurrentPromptAnEnding() {
             Prompt.text = logic.getPrompt()
